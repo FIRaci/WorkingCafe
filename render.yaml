@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: workingcafe-backend
+    runtime: node
+    repo: https://github.com/FIRaci/WorkingCafe
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: https://workingcafe.netlify.app
