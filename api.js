@@ -1,4 +1,4 @@
-const BASE_URL = 'https://workingcafe-backend.onrender.com/api';
+const BASE_URL = 'https://workingcafe.onrender.com/api';
 
 const apiClient = {
     async request(endpoint, method = 'GET', body = null) {
