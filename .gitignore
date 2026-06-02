@@ -6,3 +6,5 @@ excel_output.txt
 signup_login.txt
 database_structure.md
 schema.sql
+backend/.env
+env

@@ -10,7 +10,11 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(cors());
+const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:3000';
+app.use(cors({
+  origin: corsOrigin === '*' ? '*' : corsOrigin.split(',').map(s => s.trim()),
+  credentials: true
+}));
 app.use(express.json());
 
 const apiResponseWrapper = (req, res, next) => {
